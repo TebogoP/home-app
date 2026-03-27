@@ -24,7 +24,7 @@ import { HousingLocation } from '../housing-location';
       </section>
       <section class="listing-apply">
         <h2 class="section-heading">Apply to live here</h2>
-        <button class="listing-button">Apply Now</button>
+        <button class="primary">Apply Now</button>
       </section>
     </article>
   `,

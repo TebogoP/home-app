@@ -113,4 +113,7 @@ export class HousingService {
     return this.housingLocationList;
   }
 
+  getHousingLocationById(id: number): HousingLocation | undefined {
+    return this.housingLocationList.find(location => location.id === id);
+  }
 }

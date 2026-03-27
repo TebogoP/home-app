@@ -23,7 +23,7 @@ import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
           <li *ngIf="housingLocation?.laundry">Laundry</li>
         </ul>
       </section>
-      <section class="listing-apply">
+      <section class="listing-apply" (submit)="submitApplication()">
         <h2 class="section-heading">Apply to live here</h2>
         <form [formGroup]="applyForm">
           <div class="form-group">
@@ -58,5 +58,13 @@ export class DetailsComponent {
   constructor() {
     const housingLocationId = Number(this.route.snapshot.params["id"]);
     this.housingLocation = this.housingService.getHousingLocationById(housingLocationId);
+  }
+
+  submitApplication() {
+    this.housingService.submitApplication(
+      this.applyForm.value.firstName ?? '',
+      this.applyForm.value.lastName ?? '',
+      this.applyForm.value.email ?? ''
+    );
   }
 }

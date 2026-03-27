@@ -16,7 +16,15 @@ import { HousingLocation } from '../housing-location';
         <p class="listing-location">{{housingLocation?.city}}, {{housingLocation?.state}}</p>
       </section>
       <section class="listing-features">
-       
+        <h2 class="section-heading">Features</h2>
+        <ul>
+          <li *ngIf="housingLocation?.wifi">WiFi</li>
+          <li *ngIf="housingLocation?.laundry">Laundry</li>
+        </ul>
+      </section>
+      <section class="listing-apply">
+        <h2 class="section-heading">Apply to live here</h2>
+        <button class="listing-button">Apply Now</button>
       </section>
     </article>
   `,

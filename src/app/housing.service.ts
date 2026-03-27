@@ -118,7 +118,7 @@ export class HousingService {
   }
 
   submitApplication(firstName: string, lastName: string, email: string) {
-
+    console.log(`Application submitted! ${firstName} ${lastName} (${email})`);
     alert(`Your application has been submitted! ${firstName} ${lastName} (${email})`);
   }
 }
